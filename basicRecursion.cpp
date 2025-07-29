@@ -14,6 +14,30 @@ void print2(int n){
     i++;
     print2(n);
 }
+void print3(int n){
+    static int i=n;
+    if (i<1) return;
+    cout<<i<<endl;
+    i--;
+    print3(n);
+}
+void printsum(int n){
+    static int sum=0;
+    if (n<1) {
+        cout<<sum;
+        return ;}
+    sum+=n;
+    printsum(n-1);
+    
+}
+int  printsum1(int n){
+    if (n==0) return 0;
+    return n+printsum1(n-1);
+}
+int factorial(int n){
+    if (n==0) return 1;
+    return n*factorial(n-1);
+}
 
 
 
@@ -22,6 +46,6 @@ void print2(int n){
 int main(){
     int n;
     cin>>n;
-    print2(n);
+    cout<<(n);
     return 0;
 }
