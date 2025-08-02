@@ -1,1 +1,1 @@
-4 0 7 6 5 3 
+This is a palindrome
